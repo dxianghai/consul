@@ -166,6 +166,8 @@ and consider if they're appropriate for your deployment.
               topologyKey: kubernetes.io/hostname
         ```
 
+  * <a name="v-server-priorityclassname" href="#v-server-priorityclassname">`priorityClassName`</a> (`string`) - This value references an existing Kubernetes [priorityClassName](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#pod-priority) that can be assigned to server pods.
+
     * <a name="v-acl-sync-token" href="#v-acl-sync-token">`aclSyncToken`</a> - references a Kubernetes [secret](https://kubernetes.io/docs/concepts/configuration/secret/#creating-your-own-secrets) that contains an existing Consul ACL token. This will provide the sync process the correct permissions. This is only needed if ACLs are enabled on the Consul cluster.
 
       - <a name="v-acl-sync-token-secret-name" href="#v-acl-sync-token-secret-name">secretName </a>`(string: null)` - The name of the Kubernetes secret. This defaults to null.
@@ -216,6 +218,8 @@ and consider if they're appropriate for your deployment.
       If true, then the agent will be configured to automatically load HCL/JSON
       configuration files from this volume with `-config-dir`. This defaults
       to false.
+
+  * <a name="v-client-priorityclassname" href="#v-client-priorityclassname">`priorityClassName`</a> (`string`) - This value references an existing Kubernetes [priorityClassName](https://kubernetes.io/docs/concepts/configuration/pod-priority-preemption/#pod-priority) that can be assigned to client pods.
 
 * <a name="v-dns" href="#v-dns">`dns`</a> - Values that configure Consul DNS service.
 
